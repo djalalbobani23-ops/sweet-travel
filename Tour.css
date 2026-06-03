@@ -1,0 +1,136 @@
+/* Import Google Fonts - Poppins for headings, Open Sans for body text */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Global Styles --- */
+:root {
+    --primary-color: #007bff; /* Bleu vif pour les accents */
+    --secondary-color: #6c757d; /* Gris pour les éléments secondaires */
+    --accent-color: #28a745; /* Vert pour les actions positives (ex: Rechercher) */
+    --dark-color: #343a40; /* Couleur de texte et fond de footer */
+    --light-color: #f8f9fa; /* Arrière-plan clair */
+    --text-color: #333; /* Texte général */
+    --border-color: #e0e0e0; /* Couleur des bordures */
+    --bg-light-gray: #f4f7f6; /* Arrière-plan des sections */
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-light-gray);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--dark-color);
+    margin-top: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-accent:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary-outline:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Pour la réactivité */
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--font-heading);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
